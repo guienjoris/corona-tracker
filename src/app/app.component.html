@@ -3,11 +3,11 @@
 <p>Morts confirmés:{{worldData[0].deaths}}</p>
 <p>Cas soignés:{{worldData[0].recovered}}</p>
 <form>
-  <input type="text" name="country" [(ngModel)]="country" placeholder="Pays selon norme ISO" oninput="this.value = this.value.toUpperCase()">
+  <input type="text" name="country" [(ngModel)]="country" placeholder="Pays selon norme ISO alpha-2 ( ex: 'FR' pour la 'France')" oninput="this.value = this.value.toUpperCase()">
   <button (click)="getCountry(country)">Envoyer</button>
 </form>
 <div>
-<a href="https://fr.wikipedia.org/wiki/ISO_3166-1">Liste des pays en ISO</a>
+<a href="https://fr.wikipedia.org/wiki/ISO_3166-1" target="_blank">Liste des pays en ISO(alpha-2)</a>
 </div>
 <div *ngIf="displayCountry === true ">
   <p><b>Cas en {{countryName}}:</b></p>
