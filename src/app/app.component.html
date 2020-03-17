@@ -1,6 +1,6 @@
-<h1>Cas mondial de Covid-19:</h1>
+<h1>Cas mondiaux de Covid-19:</h1>
 <p>Cas confirmés:{{worldData[0].confirmed}}</p>
-<p>Morts confirmés:{{worldData[0].deaths}}</p>
+<p>Morts confirmées:{{worldData[0].deaths}}</p>
 <p>Cas soignés:{{worldData[0].recovered}}</p>
 <form>
   <input type="text" name="country" [(ngModel)]="country" placeholder="Pays selon norme ISO alpha-2 ( ex: 'FR' pour la 'France')" oninput="this.value = this.value.toUpperCase()">
@@ -10,7 +10,7 @@
 <a href="https://fr.wikipedia.org/wiki/ISO_3166-1" target="_blank">Liste des pays en ISO(alpha-2)</a>
 </div>
 <div *ngIf="displayCountry === true ">
-  <p><b>Cas en {{countryName}}:</b></p>
+  <p><b>Situation {{countryName}}:</b></p>
   <p>Confirmés: {{confirmedCountry.latest}}</p>
   <p>Morts: {{deathCountry.latest}}</p>
   <p>Soignés: {{recoveredCountry.latest}}</p>
