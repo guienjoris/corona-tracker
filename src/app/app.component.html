@@ -1,0 +1,19 @@
+<h1>Cas mondiale de Covid-19:</h1>
+<p>Cas confirmé:{{worldData[0].confirmed}}</p>
+<p>Morts confirmés:{{worldData[0].deaths}}</p>
+<p>Cas soignés:{{worldData[0].recovered}}</p>
+<form>
+  <input type="text" name="country" [(ngModel)]="country" placeholder="Pays selon norme ISO" oninput="this.value = this.value.toUpperCase()">
+  <button (click)="getCountry(country)">Envoyer</button>
+</form>
+<div>
+<a href="https://fr.wikipedia.org/wiki/ISO_3166-1">Liste des pays en ISO</a>
+</div>
+<div *ngIf="displayCountry === true ">
+  <p><b>Cas en {{countryName}}:</b></p>
+  <p>Confirmés: {{confirmedCountry.latest}}</p>
+  <p>Morts: {{deathCountry.latest}}</p>
+  <p>Soignés: {{recoveredCountry.latest}}</p>
+</div>
+<i>Dernière mise à jour: {{worldData[1]}}</i>
+
